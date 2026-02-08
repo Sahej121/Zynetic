@@ -15,7 +15,7 @@ import { AnalyticsModule } from './analytics/analytics.module';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
-        type: configService.get<string>('DB_TYPE', 'postgres') as any,
+        type: 'postgres',
         host: configService.get<string>('DB_HOST', 'localhost'),
         port: configService.get<number>('DB_PORT', 5432),
         username: configService.get<string>('DB_USERNAME', 'postgres'),

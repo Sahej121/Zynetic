@@ -6,28 +6,11 @@ services:
     envVars:
       - key: PORT
         value: 3000
-      - key: DB_HOST
+      - key: DATABASE_URL
         fromService:
           type: psql
           name: zynetic-db
-          property: host
-      - key: DB_PORT
-        value: 5432
-      - key: DB_USERNAME
-        fromService:
-          type: psql
-          name: zynetic-db
-          property: user
-      - key: DB_PASSWORD
-        fromService:
-          type: psql
-          name: zynetic-db
-          property: password
-      - key: DB_DATABASE
-        fromService:
-          type: psql
-          name: zynetic-db
-          property: database
+          property: connectionString
       - key: DB_SYNCHRONIZE
         value: true
 
