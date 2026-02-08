@@ -7,8 +7,7 @@ services:
       - key: PORT
         value: 3000
       - key: DATABASE_URL
-        fromService:
-          type: psql
+        fromDatabase:
           name: zynetic-db
           property: connectionString
       - key: DB_SYNCHRONIZE
@@ -17,5 +16,5 @@ services:
 databases:
   - name: zynetic-db
     databaseName: telemetry
-    user: postgres
+    user: zynetic_user
     plan: free
