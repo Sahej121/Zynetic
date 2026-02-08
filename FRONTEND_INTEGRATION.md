@@ -4,7 +4,7 @@ This backend is designed to be consumed by any frontend application (React, Vue,
 
 ## 1. Base URL
 - **Local Development:** `http://localhost:3000`
-- **Production (Render):** `https://zynetic-api.onrender.com` (or your specific Render URL)
+- **Production (Render):** `https://zynetic-api.onrender.com` (Your Live Backend)
 
 ## 2. CORS (Cross-Origin Resource Sharing)
 CORS is **enabled** on the backend, allowing requests from any origin (`*`). This means your frontend running on `localhost:5173` (Vite) or `localhost:3001` can verify communicate with the API without issues.
