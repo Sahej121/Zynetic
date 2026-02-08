@@ -7,19 +7,27 @@ services:
       - key: PORT
         value: 3000
       - key: DB_HOST
-        fromService: zynetic-db
-        property: host
+        fromService:
+          type: psql
+          name: zynetic-db
+          property: host
       - key: DB_PORT
         value: 5432
       - key: DB_USERNAME
-        fromService: zynetic-db
-        property: user
+        fromService:
+          type: psql
+          name: zynetic-db
+          property: user
       - key: DB_PASSWORD
-        fromService: zynetic-db
-        property: password
+        fromService:
+          type: psql
+          name: zynetic-db
+          property: password
       - key: DB_DATABASE
-        fromService: zynetic-db
-        property: database
+        fromService:
+          type: psql
+          name: zynetic-db
+          property: database
       - key: DB_SYNCHRONIZE
         value: true
 
