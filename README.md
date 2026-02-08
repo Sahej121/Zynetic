@@ -166,11 +166,27 @@ DTO validation is strict. Only whitelisted fields are accepted, and malformed pa
 
 The system favors clarity and correctness over premature complexity. Areas such as meter-vehicle mapping, roll-up tables, or alerting are intentionally left as future extensions rather than assumptions baked into the core.
 
-Optional Follow-Up
+---
+
+## Comparison with Real-World Implementation (What's Next?)
 
 If extended beyond a take-home exercise, the next step would be validating this design against a small, anonymized slice of real telemetry data. Real data often reveals timing skew and sparsity patterns that synthetic inputs cannot fully capture.
 
-This is not required for evaluation but reflects how the system would be hardened for production use.
+## 🚀 Deployment Guide
+
+This project includes a `render.yaml` Infrastructure-as-Code file for easy deployment on [Render](https://render.com).
+
+### Steps to Deploy:
+1.  Push this repository to your GitHub.
+2.  Login to Render.com.
+3.  Click "New +", select "Blueprint".
+4.  Connect your repository.
+5.  Click "Apply".
+    - Render will automatically provision a PostgreSQL database.
+    - It will build and deploy the NestJS API.
+    - It will wire up all environment variables (`DB_HOST`, etc.) automatically.
+
+The API will be live in ~2 minutes! 🌍
 
 Final note (important correction I made)
 
